@@ -23,7 +23,7 @@ jobs:
         dotnet-version: ${{ matrix.dotnet }}
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore LabWebApp/LabWebApp.sln
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build LabWebApp/LabWebApp.sln --configuration Release --no-restore
